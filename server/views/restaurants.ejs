@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Shanghai</title>
+    <link rel="icon" href="images/Shanghai-580x386.jpg" />
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <header></header>
+    <nav></nav>
+
+    <div class="restaurants">
+      <% for (let re of restaurantData) { %>
+      <div class="restaurantInfo">
+        <div class="RImage">
+          <img src="<%= re.photo %>" alt="" />
+        </div>
+        <div>
+          <p><%= re.name %></p>
+          <p><%= re.address %></p>
+          <p><%= re.phone %></p>
+        </div>
+        <button id="delete-<%= re.id  %>" class="delete">X</button>
+      </div>
+      <% } %>
+    </div>
+  </body>
+  <footer></footer>
+  <script type="module" src="scripts/header.js"></script>
+  <script type="module" src="scripts/restaurantCards.js"></script>
+</html>
